@@ -1,7 +1,7 @@
 import json
 import os
 import re
-invalid_chars_pattern = r'[<>:"/\\|?*\n\r]'
+invalid_chars_pattern = r'[<>:"/\\|?*\n\r#]'
 
 
 def create_amp_html(tweet_text, created_at, author_name, author_handle, tweet_id):
