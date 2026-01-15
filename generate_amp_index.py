@@ -3,7 +3,7 @@ import os
 
 # Configuration
 OUTPUT_FILE = 'index.html'
-PAGE_TITLE = "File Index"
+PAGE_TITLE = "Celia (Cea) Weaver Deleted Tweets"
 
 # AMP Boilerplate and Styles
 AMP_HEADER = f"""<!doctype html>
