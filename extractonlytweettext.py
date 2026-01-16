@@ -30,7 +30,13 @@ def extract_tweet_text():
         # Clean up the surrounding smart quotes used in the source
         clean_tweet_text = tweet_text.strip('“”"')
         sanitized_filename = re.sub(invalid_chars_pattern, '_', clean_tweet_text)
-        print(f'cp {file_path} "{sanitized_filename[:240]}.html"')
+        parts1=file_path.split("/")
+        if len(parts1) > 2:
+            signature1 = f"{parts1[1]} {parts1[0]}"
+        else:
+            signature1 = ""
+        target1=f"{signature1} {sanitized_filename}"[:240]
+        print(f'cp {file_path} "{target1}.html"')
         print(clean_tweet_text)
     else:
         # Fallback to <title> tag if meta tag is missing
