@@ -32,7 +32,7 @@ def extract_tweet_text():
         sanitized_filename = re.sub(invalid_chars_pattern, '_', clean_tweet_text)
         parts1=file_path.split("/")
         if len(parts1) > 2:
-            signature1 = f"{parts1[1]} {parts1[0]}"
+            signature1 = f"{parts1[2]} {parts1[1]}"
         else:
             signature1 = ""
         target1=f"{signature1} {sanitized_filename}"[:240]
