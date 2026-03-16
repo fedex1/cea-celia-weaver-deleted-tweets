@@ -1,8 +1,8 @@
 #!
 DATE=$(date +%Y-%m-%d)
-python working_wayback_scraper.py "stopvickie" |tee log.${DATE}
-grep --no-filename "^\[" log.${DATE} |jq -scr '.[]|.[1]' >restore-tweets.${DATE}.txt
-# ./processwayback.sh restore-tweets.${DATE}.txt
+# python working_wayback_scraper.py "stopvickie" |tee log.${DATE}
+grep --no-filename "^\[\"" log.${DATE} |jq -scr '.[]|.[1]' >restore-tweets.${DATE}.txt
+./processwayback.sh restore-tweets.${DATE}.txt
 exit
 
 # ./processwayback.sh input-celia-cea-weaver-deleted-tweets.txt 
