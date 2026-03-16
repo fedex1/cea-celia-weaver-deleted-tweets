@@ -59,8 +59,8 @@ userlist=[
 print(sys.argv)
 if len(sys.argv) > 1:
     userlist=sys.argv[1].split(",")
-print(userlist)
-sys.exit(1)
+# print(userlist)
+# sys.exit(1)
 for username in userlist:
     df_tweets = get_wayback_tweets(username)
 
