@@ -1,3 +1,4 @@
+import os
 import sys
 import requests
 import json
@@ -22,7 +23,7 @@ payload = {
 }
 
 headers = {
-    "Authorization": "Bearer fc-26901e6d11be46a488ddc9c7cc730242",
+    "Authorization": f"Bearer {os.environ['FIRECRAWL_API_KEY']}",
     "Content-Type": "application/json"
 }
 
