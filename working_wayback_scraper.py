@@ -10,7 +10,9 @@ def get_wayback_tweets(username):
     # The CDX API allows us to search for all archived URLs under a specific path
     # We use a wildcard (*) to find all specific tweet status pages
     target_url = f"twitter.com/{username}/status/*"
-    cdx_url = f"http://web.archive.org/cdx/search/cdx?url={target_url}&output=json&fl=timestamp,original&collapse=digest"
+    # cdx_url = f"http://web.archive.org/cdx/search/cdx?url={target_url}&output=json&fl=timestamp,original&collapse=digest"
+    # from parameter
+    cdx_url = f"http://web.archive.org/cdx/search/cdx?url={target_url}&from=20260226&output=json&fl=timestamp,original&collapse=digest"
 
     print(f"📡 Querying Wayback Machine for @{username}...")
     

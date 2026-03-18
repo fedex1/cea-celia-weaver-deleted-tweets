@@ -1,5 +1,11 @@
 #!
 DATE=$(date +%Y-%m-%d)
+
+grep --no-filename "^\[\"" log.20260226 |jq -scr '.[]|.[1]' > log.20260226.input.txt
+./processwayback2.sh log.20260226.input.txt 20260226.on.$(date +%Y-%m-%d)
+exit
+
+
 # python working_wayback_scraper.py "stopvickie" |tee log.${DATE}
 grep --no-filename "^\[\"" log.${DATE} |jq -scr '.[]|.[1]' >restore-tweets.${DATE}.txt
 ./processwayback.sh restore-tweets.${DATE}.txt
