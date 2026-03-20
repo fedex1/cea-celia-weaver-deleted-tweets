@@ -1,0 +1,1 @@
+10 6 * * * (cd $HOME/github.com/fedex1/cea-celia-weaver-deleted-tweets  && . $HOME/.profile && ./runall_cron.sh) > $HOME/tmp/./runall_cron.sh.out.txt 2>&1
