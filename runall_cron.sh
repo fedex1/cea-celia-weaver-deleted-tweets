@@ -13,5 +13,5 @@ while IFS= read -r line; do
   waybackpack $line -d "20260226.on.$DATE"
 done < "$FILE"
 
-python firecrawl_test.py |jq -c '.data.web[]' >firecrawl.$DATE.jsonl
+python firecrawl-test.py |jq -c '.data.web[]' >firecrawl.$DATE.jsonl
 
