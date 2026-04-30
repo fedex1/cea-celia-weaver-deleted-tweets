@@ -3,10 +3,16 @@ import sys
 import requests
 import json
 
+# query = "https://x.com/MicahLasher"
+query = "site:x.com paladino after:2026-02-26"
+if len(sys.argv) > 1:
+    # print(f"argv {sys.argv}") 
+    query = sys.argv[1]
+# sys.exit(1)
 url = "https://api.firecrawl.dev/v2/search"
 
 payload = {
-  "query": "site:x.com paladino after:2026-02-26",
+  "query": query,
   "sources": [
     "web"
   ],
